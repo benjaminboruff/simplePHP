@@ -15,7 +15,7 @@ function dd($data)
 function getConnectionDb()
 {
     try {
-        return new PDO('mysql:host=127.0.0.1;dbname=phptest', 'root', '');
+        return new PDO('mysql:host=127.0.0.1;dbname=phptest', 'root', 'mysql');
     } catch (PDOEXCEPTION $e) {
         echo "Could not connect!";
         echo $e->getMessage();
