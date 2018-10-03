@@ -1,9 +1,11 @@
 <?php
 
-require "utils.php";
+require 'utils.php';
+require 'Task.php';
 
-$pdo = getConnectionDb();
-$tasks = fetchAllTasks($pdo);
+$db = require 'bootstrap.php';
+
+$tasks = $db->selectAll('todos', 'Task');
 // dd($tasks);
 
 require "index.view.php";
