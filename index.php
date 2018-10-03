@@ -1,11 +1,16 @@
 <?php
 
-require 'utils.php';
-require 'Task.php';
+// I have php setup to NOT display
+// errors in the browser by default.
 
-$db = require 'bootstrap.php';
+// Uncomment this to display errors
+// in the browser
+// ini_set('display_errors', 1);
 
-$tasks = $db->selectAll('todos', 'Task');
-// dd($tasks);
+$db = require 'core/bootstrap.php';
 
-require "index.view.php";
+$routes = [
+    '' => 'controllers/index.php',
+    'about' => 'controllers/about.php',
+    'contact' => 'controllers/contact.php'
+];

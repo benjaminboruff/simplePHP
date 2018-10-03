@@ -22,6 +22,10 @@
     </header>
     <main>
         <ul>
+            <li><a href="/views/about.view.php">About</a></li>
+            <li><a href="/views/contact.view.php">Contact</a></li>
+        </ul>
+        <ul>
             <?php foreach ($tasks as $task) : ?>
                 <li>
                     <?php if ($task->isComplete()) : ?>
