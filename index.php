@@ -1,16 +1,9 @@
 <?php
 
-// I have php setup to NOT display
-// errors in the browser by default.
+require 'core/bootstrap.php';
 
 // Uncomment this to display errors
-// in the browser
+// in both the browser and console.
 // ini_set('display_errors', 1);
 
-$db = require 'core/bootstrap.php';
-
-$router = new Router;
-
-require 'routes.php';
-
-require $router->direct();
+require Router::load('routes.php')->route(Request::uri());

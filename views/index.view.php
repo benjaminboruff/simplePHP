@@ -22,8 +22,8 @@
     </header>
     <main>
         <ul>
-            <li><a href="/views/about.view.php">About</a></li>
-            <li><a href="/views/contact.view.php">Contact</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
         </ul>
         <ul>
             <?php foreach ($tasks as $task) : ?>
