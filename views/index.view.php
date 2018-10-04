@@ -25,6 +25,7 @@
             <li><a href="/about">About</a></li>
             <li><a href="/contact">Contact</a></li>
         </ul>
+        <h3>My Tasks</h3>
         <ul>
             <?php foreach ($tasks as $task) : ?>
                 <li>
