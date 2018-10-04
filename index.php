@@ -9,8 +9,8 @@
 
 $db = require 'core/bootstrap.php';
 
-$routes = [
-    '' => 'controllers/index.php',
-    'about' => 'controllers/about.php',
-    'contact' => 'controllers/contact.php'
-];
+$router = new Router;
+
+require 'routes.php';
+
+require $router->direct();
