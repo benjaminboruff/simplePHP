@@ -6,4 +6,4 @@ require 'core/bootstrap.php';
 // in both the browser and console.
 // ini_set('display_errors', 1);
 
-require Router::load('routes.php')->route(Request::uri());
+require Router::load('routes.php')->route(Request::uri(), Request::method());
