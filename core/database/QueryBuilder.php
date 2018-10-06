@@ -15,10 +15,21 @@ class QueryBuilder
         $statement->execute();
         return $statement->fetchAll(PDO::FETCH_CLASS, $intoClass);
     }
-    public function insertName($table, $name)
+
+    public function insert($table, $parameters)
     {
-        // dd($sqlStr);
-        $insert = $this->pdo->prepare("insert into {$table} (name) VALUES('{$name}')");
-        return $insert->execute();
+        $sql = sprintf(
+            'insert into %s (%s) VALUES(%s)',
+            $table,
+            implode(", ", array_keys($parameters)),
+            ':' . implode(", :", array_keys($parameters))
+        );
+        // dd($sql);
+        try {
+            $insert = $this->pdo->prepare($sql);
+            return $insert->execute($parameters);
+        } catch (Exception $e) {
+            die("Whoops, something went wront!");
+        }
     }
 }

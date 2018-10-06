@@ -8,4 +8,6 @@
     <button type="submit">submit</button>
 </form>
 
+<?php require('partials/users.php'); ?>
+
 <?php require('partials/footer.php'); ?>
