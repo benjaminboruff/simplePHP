@@ -1,7 +1,9 @@
 <?php
 
-$app['database']->insert('users', ['name' => $_POST['name']]);
-$users = $app['database']->selectAll('users', 'User');
 $title = "Users";
+
+App::get('database')->insert('users', ['name' => $_POST['name']]);
+$users = App::get('database')->selectAll('users', 'User');
+
 
 header('Location: /');
