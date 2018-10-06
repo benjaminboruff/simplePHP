@@ -1,7 +1,5 @@
 <?php
 
-require 'core/User.php';
-
 $users = $app['database']->selectAll('users', 'User');
 $title = "Users";
 
