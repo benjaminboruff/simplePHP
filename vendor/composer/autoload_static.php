@@ -7,19 +7,19 @@ namespace Composer\Autoload;
 class ComposerStaticInit9b82081c35395873d6fe9858591e8a0b
 {
     public static $classMap = array (
-        'App' => __DIR__ . '/../..' . '/core/App.php',
+        'App\\Controllers\\PagesController' => __DIR__ . '/../..' . '/app/controllers/PagesController.php',
+        'App\\Controllers\\UsersController' => __DIR__ . '/../..' . '/app/controllers/UsersController.php',
+        'App\\Core\\App' => __DIR__ . '/../..' . '/core/App.php',
+        'App\\Core\\Database\\Connection' => __DIR__ . '/../..' . '/core/database/Connection.php',
+        'App\\Core\\Database\\QueryBuilder' => __DIR__ . '/../..' . '/core/database/QueryBuilder.php',
+        'App\\Core\\Request' => __DIR__ . '/../..' . '/core/Request.php',
+        'App\\Core\\Router' => __DIR__ . '/../..' . '/core/Router.php',
+        'App\\Core\\Task' => __DIR__ . '/../..' . '/core/Task.php',
+        'App\\Core\\User' => __DIR__ . '/../..' . '/core/User.php',
+        'App\\Core\\Util' => __DIR__ . '/../..' . '/core/Util.php',
         'ComposerAutoloaderInit9b82081c35395873d6fe9858591e8a0b' => __DIR__ . '/..' . '/composer/autoload_real.php',
         'Composer\\Autoload\\ClassLoader' => __DIR__ . '/..' . '/composer/ClassLoader.php',
         'Composer\\Autoload\\ComposerStaticInit9b82081c35395873d6fe9858591e8a0b' => __DIR__ . '/..' . '/composer/autoload_static.php',
-        'Connection' => __DIR__ . '/../..' . '/core/database/Connection.php',
-        'PagesController' => __DIR__ . '/../..' . '/controllers/PagesController.php',
-        'QueryBuilder' => __DIR__ . '/../..' . '/core/database/QueryBuilder.php',
-        'Request' => __DIR__ . '/../..' . '/core/Request.php',
-        'Router' => __DIR__ . '/../..' . '/core/Router.php',
-        'Task' => __DIR__ . '/../..' . '/core/Task.php',
-        'User' => __DIR__ . '/../..' . '/core/User.php',
-        'UsersController' => __DIR__ . '/../..' . '/controllers/UsersController.php',
-        'Util' => __DIR__ . '/../..' . '/core/Util.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

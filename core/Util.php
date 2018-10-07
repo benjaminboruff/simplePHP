@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Core;
+
 class Util
 {
     // dump and die
@@ -14,7 +16,7 @@ class Util
     public static function view($view, $data = [])
     {
         extract($data);
-        return require "views/{$view}.view.php";
+        return require "app/views/{$view}.view.php";
     }
     public static function redirect($path, $data = [])
     {
