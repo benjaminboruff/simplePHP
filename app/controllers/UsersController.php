@@ -2,8 +2,8 @@
 
 namespace App\Controllers;
 
-use App\Core\Util;
-use App\Core\App;
+use Core\Util;
+use Core\App;
 
 class UsersController
 {

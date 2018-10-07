@@ -1,7 +1,7 @@
 <?php
 // require 'core/utils.php';
 
-namespace App\Core\Database;
+namespace Core\Database;
 
 use PDO;
 
@@ -16,7 +16,7 @@ class QueryBuilder
 
     public function selectAll($table, $intoClass)
     {
-        $intoClass = "App\\Core\\{$intoClass}";
+        $intoClass = "Core\\{$intoClass}";
         $statement = $this->pdo->prepare("select * from {$table}");
         $statement->execute();
         return $statement->fetchAll(PDO::FETCH_CLASS, $intoClass);

@@ -3,8 +3,8 @@
 require 'vendor/autoload.php';
 require 'core/bootstrap.php';
 
-use App\Core\Router;
-use App\Core\Request;
+use Core\Router;
+use Core\Request;
 
 // Uncomment this to display errors
 // in both the browser and console.
