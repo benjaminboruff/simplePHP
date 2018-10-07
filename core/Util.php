@@ -10,4 +10,15 @@ class Util
         //echo "</pre>";
         die();
     }
+
+    public static function view($view, $data = [])
+    {
+        extract($data);
+        return require "views/{$view}.view.php";
+    }
+    public static function redirect($path, $data = [])
+    {
+        extract($data);
+        return header("Location: /{$path}");
+    }
 }

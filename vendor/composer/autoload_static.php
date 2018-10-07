@@ -12,11 +12,13 @@ class ComposerStaticInit9b82081c35395873d6fe9858591e8a0b
         'Composer\\Autoload\\ClassLoader' => __DIR__ . '/..' . '/composer/ClassLoader.php',
         'Composer\\Autoload\\ComposerStaticInit9b82081c35395873d6fe9858591e8a0b' => __DIR__ . '/..' . '/composer/autoload_static.php',
         'Connection' => __DIR__ . '/../..' . '/core/database/Connection.php',
+        'PagesController' => __DIR__ . '/../..' . '/controllers/PagesController.php',
         'QueryBuilder' => __DIR__ . '/../..' . '/core/database/QueryBuilder.php',
         'Request' => __DIR__ . '/../..' . '/core/Request.php',
         'Router' => __DIR__ . '/../..' . '/core/Router.php',
         'Task' => __DIR__ . '/../..' . '/core/Task.php',
         'User' => __DIR__ . '/../..' . '/core/User.php',
+        'UsersController' => __DIR__ . '/../..' . '/controllers/UsersController.php',
         'Util' => __DIR__ . '/../..' . '/core/Util.php',
     );
 

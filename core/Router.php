@@ -27,11 +27,27 @@ class Router
     public function route($uri, $requestType)
     {
         if (array_key_exists($uri, $this->routes[$requestType])) {
-            return $this->routes[$requestType][$uri];
+            // Util::dd($this->routes[$requestType][$uri]);
+            $this->callAction(
+                ...explode('@', $this->routes[$requestType][$uri])
+            );
         } else {
             return $this->routes['GET'][''];
         }
 
         // throw new Exception("No route defined for this uri.", 1);
+    }
+
+    protected function callAction($controller, $action)
+    {
+        $controller = new $controller;
+        //Util::dd($controller);
+        if (! method_exists($controller, $action)) {
+            throw new Exception(
+                get_class($controller) . " does not respond to {$action} action"
+            );
+        }
+
+        return $controller->$action();
     }
 }
